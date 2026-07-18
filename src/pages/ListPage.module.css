@@ -1,0 +1,52 @@
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+}
+
+.status {
+  text-align: center;
+  padding: 4rem 1rem;
+  color: var(--ink-faint);
+}
+
+.back {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin-bottom: 1rem;
+}
+
+.back:hover { color: var(--enamel); }
+
+.title {
+  font-size: 1.7rem;
+  margin-bottom: 0.2rem;
+}
+
+.count {
+  color: var(--ink-faint);
+  font-size: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.searchMeta {
+  color: var(--ink-soft);
+  margin-bottom: 1.25rem;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.filterSelect {
+  padding: 0.4rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--paper-raised);
+  color: var(--ink);
+  font-size: 0.82rem;
+}

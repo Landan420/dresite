@@ -1,0 +1,139 @@
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 4rem;
+}
+
+.back {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin-bottom: 1rem;
+}
+
+.back:hover { color: var(--enamel); }
+
+.titleRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  line-height: 1.2;
+}
+
+.favBtn {
+  border: none;
+  background: transparent;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--ink-faint);
+  flex-shrink: 0;
+  padding: 0.1rem;
+}
+
+.favBtn:hover, .favBtn[aria-pressed="true"] { color: var(--gold); }
+
+.metaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+
+.yieldLine {
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--ink-faint);
+}
+
+.siblingsNote {
+  margin-top: 0.9rem;
+  padding: 0.7rem 0.95rem;
+  background: var(--gold-soft);
+  color: var(--ink);
+  border: 1px solid color-mix(in srgb, var(--gold) 45%, transparent);
+  border-radius: var(--radius);
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+.siblingsNote a {
+  color: var(--enamel);
+  text-decoration: underline;
+}
+
+.warning {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background: var(--burnt-wash);
+  color: var(--burnt);
+  border: 1px solid color-mix(in srgb, var(--burnt) 30%, transparent);
+  border-radius: var(--radius);
+  font-size: 0.86rem;
+  line-height: 1.4;
+}
+
+.section {
+  margin-top: 2rem;
+}
+
+.sectionTitle {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.totalLine {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--ink-faint);
+}
+
+.notes {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+
+.footerRow {
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-soft);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.printBtn {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--paper-raised);
+  color: var(--ink);
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.printBtn:hover { border-color: var(--enamel); color: var(--enamel); }
+
+.source {
+  font-size: 0.75rem;
+  color: var(--ink-faint);
+}
+
+@media print {
+  .wrap { max-width: 100%; padding: 0; }
+  .warning { background: none; border: 1px solid var(--burnt); }
+}

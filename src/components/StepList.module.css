@@ -1,0 +1,59 @@
+.clearBtn {
+  border: none;
+  background: transparent;
+  color: var(--ink-faint);
+  font-size: 0.78rem;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0 0 0.6rem;
+}
+
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.step { }
+
+.stepLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  cursor: pointer;
+  padding: 0.55rem 0.65rem;
+  border-radius: 10px;
+  transition: background 0.15s ease;
+}
+
+.stepLabel:hover { background: var(--border-soft); }
+
+.checkbox {
+  margin-top: 0.2rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: var(--enamel);
+  flex-shrink: 0;
+}
+
+.stepNum {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+  flex-shrink: 0;
+  min-width: 1.4em;
+}
+
+.stepText {
+  font-size: 0.96rem;
+  line-height: 1.5;
+}
+
+.stepDone .stepText {
+  text-decoration: line-through;
+  color: var(--ink-faint);
+}

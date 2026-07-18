@@ -1,0 +1,62 @@
+.scaler {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+  padding: 1rem 1.1rem;
+  background: var(--enamel-wash);
+  border: 1px solid color-mix(in srgb, var(--enamel) 25%, var(--border));
+  border-radius: var(--radius);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  flex: 1;
+  min-width: 200px;
+}
+
+.label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--enamel);
+  font-weight: 600;
+}
+
+.select, .weightInput {
+  padding: 0.45rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--paper-raised);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+.weightRow {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.weightInput {
+  width: 110px;
+}
+
+.resetBtn {
+  border: none;
+  background: transparent;
+  color: var(--enamel);
+  font-size: 0.78rem;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.slider {
+  width: 100%;
+  accent-color: var(--enamel);
+}

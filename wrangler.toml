@@ -1,0 +1,15 @@
+name = "bakedwithdre"
+compatibility_date = "2026-07-17"
+pages_build_output_dir = "./dist"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "dresite-recipes"
+database_id = "e1ee5b84-c69f-4442-a5fe-2c03a5ae1971"
+
+[env.production]
+
+[[env.production.d1_databases]]
+binding = "DB"
+database_name = "dresite-recipes"
+database_id = "e1ee5b84-c69f-4442-a5fe-2c03a5ae1971"

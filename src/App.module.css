@@ -1,0 +1,138 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: color-mix(in srgb, var(--paper) 92%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.headerInner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.brandMark {
+  color: var(--gold);
+}
+
+.searchForm {
+  flex: 1;
+  display: flex;
+  min-width: 0;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--paper-raised);
+  overflow: hidden;
+}
+
+.searchInput {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.9rem;
+  color: var(--ink);
+  outline: none;
+  font-family: var(--font-body);
+}
+
+.searchInput::placeholder {
+  color: var(--ink-faint);
+}
+
+.searchBtn {
+  border: none;
+  background: transparent;
+  color: var(--ink-soft);
+  padding: 0 0.9rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.searchBtn:hover { color: var(--enamel); }
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  flex-shrink: 0;
+}
+
+.navLink {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.navLink:hover { color: var(--enamel); }
+
+.themeBtn {
+  border: 1px solid var(--border);
+  background: var(--paper-raised);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-soft);
+}
+
+.themeBtn:hover { border-color: var(--enamel); color: var(--enamel); }
+
+.main {
+  flex: 1;
+  width: 100%;
+}
+
+.footer {
+  border-top: 1px solid var(--border-soft);
+  padding: 2rem 1.25rem 3rem;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--ink-faint);
+  max-width: 40ch;
+  margin: 0 auto;
+}
+
+.adminLink {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.72rem;
+  color: var(--ink-faint);
+  opacity: 0.6;
+}
+
+.adminLink:hover {
+  color: var(--enamel);
+  opacity: 1;
+}
+
+@media (max-width: 640px) {
+  .brand span:last-child { display: none; }
+  .navLink { display: none; }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "bakedwithdre",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "seed": "node scripts/build-seed-sql.mjs",
+    "db:migrate:local": "wrangler d1 execute dresite-recipes --local --file=schema.sql",
+    "db:seed:local": "npm run seed && wrangler d1 execute dresite-recipes --local --file=data/seed.sql",
+    "db:migrate:remote": "wrangler d1 execute dresite-recipes --remote --file=schema.sql",
+    "db:seed:remote": "npm run seed && wrangler d1 execute dresite-recipes --remote --file=data/seed.sql",
+    "pages:dev": "npm run build && wrangler pages dev dist --local",
+    "deploy": "npm run build && wrangler pages deploy dist --project-name bakedwithdre"
+  },
+  "dependencies": {
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "react-router-dom": "^7.17.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.1",
+    "vite": "^8.0.12",
+    "wrangler": "^4.99.0"
+  }
+}
