@@ -28,17 +28,47 @@ function roundAmount(n) {
   return Math.round(n * 100) / 100
 }
 
+function isGramUnit(unit) {
+  return unit === 'grams' || unit === 'gram'
+}
+
+// Total flour weight is the 100% base for baker's percentage. Sums every
+// flour-type ingredient (a recipe may use more than one, e.g. bread + whole wheat).
+function totalFlourGrams(ingredients, colIndex) {
+  let total = 0
+  let found = false
+  for (const ing of ingredients) {
+    if (!/flour/i.test(ing.name)) continue
+    const pair = ing.amounts?.[colIndex] || ing.amounts?.[0]
+    if (!pair || !isGramUnit(pair[1])) continue
+    const n = parseAmount(pair[0])
+    if (n != null) {
+      total += n
+      found = true
+    }
+  }
+  return found ? total : null
+}
+
 export function scaleIngredients(recipe, colIndex, targetGrams) {
   const base = baseYieldGrams(recipe, colIndex)
   const factor = base && targetGrams ? targetGrams / base : 1
+  const flourTotal = totalFlourGrams(recipe.ingredients, colIndex)
 
   return recipe.ingredients.map(ing => {
     const pair = ing.amounts?.[colIndex] || ing.amounts?.[0]
-    if (!pair) return { ...ing, scaledAmount: null, scaledUnit: null }
+
+    let bakersPct = ing.bakers_pct
+    if (bakersPct == null && flourTotal && pair && isGramUnit(pair[1])) {
+      const n = parseAmount(pair[0])
+      if (n != null) bakersPct = Math.round((n / flourTotal) * 1000) / 10
+    }
+
+    if (!pair) return { ...ing, bakers_pct: bakersPct, scaledAmount: null, scaledUnit: null }
     const [amtStr, unit] = pair
     const n = parseAmount(amtStr)
-    if (n == null) return { ...ing, scaledAmount: amtStr || null, scaledUnit: unit }
-    return { ...ing, scaledAmount: roundAmount(n * factor), scaledUnit: unit }
+    if (n == null) return { ...ing, bakers_pct: bakersPct, scaledAmount: amtStr || null, scaledUnit: unit }
+    return { ...ing, bakers_pct: bakersPct, scaledAmount: roundAmount(n * factor), scaledUnit: unit }
   })
 }
 
