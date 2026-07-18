@@ -17,7 +17,8 @@ export const CATEGORY_ICONS = {
   'Buttercreams & Icings': '🎨',
   'Cake Decorating': '✨',
   'Cheesecakes': '🍰',
-  'Baking Techniques & Ingredients': '📖',
+  'Flavorings': '🍋',
+  'Mixing Methods': '🌀',
 }
 
 export function iconFor(category) {

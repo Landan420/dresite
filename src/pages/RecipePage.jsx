@@ -2,15 +2,14 @@ import { useEffect, useMemo, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { useRecipes } from '../lib/useRecipes.jsx'
 import { useFavorites } from '../lib/useFavorites.js'
-import { baseYieldGrams, scaleIngredients } from '../lib/scale.js'
+import { baseYieldGrams, scaleIngredients, homeScaleGrams, PRO_SCALE_THRESHOLD_G } from '../lib/scale.js'
 import { iconFor, slugify } from '../lib/categories.js'
 import Scaler from '../components/Scaler.jsx'
 import IngredientList from '../components/IngredientList.jsx'
 import StepList from '../components/StepList.jsx'
+import RichText from '../components/RichText.jsx'
 import styles from './RecipePage.module.css'
 import listStyles from './ListPage.module.css'
-
-const PRO_SCALE_THRESHOLD_G = 2500
 
 export default function RecipePage() {
   const { id } = useParams()
@@ -50,6 +49,7 @@ export default function RecipePage() {
   const scaled = scaleIngredients(recipe, colIndex, targetGrams || baseGrams || 0)
   const fav = isFavorite(recipe.id)
   const isProScale = baseGrams && baseGrams >= PRO_SCALE_THRESHOLD_G
+  const homeGrams = isProScale ? homeScaleGrams(baseGrams) : null
 
   return (
     <div className={styles.wrap}>
@@ -101,24 +101,29 @@ export default function RecipePage() {
         </div>
       )}
 
-      <Scaler
-        recipe={recipe}
-        colIndex={colIndex}
-        onColIndexChange={setColIndex}
-        targetGrams={targetGrams || baseGrams || 0}
-        onTargetGramsChange={setTargetGrams}
-        baseGrams={baseGrams}
-      />
+      {recipe.ingredients.length > 0 && (
+        <>
+          <Scaler
+            recipe={recipe}
+            colIndex={colIndex}
+            onColIndexChange={setColIndex}
+            targetGrams={targetGrams || baseGrams || 0}
+            onTargetGramsChange={setTargetGrams}
+            baseGrams={baseGrams}
+            homeGrams={homeGrams}
+          />
 
-      <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>Ingredients</h2>
-        <IngredientList ingredients={scaled} />
-        {recipe.total && (
-          <p className={styles.totalLine}>
-            Formula total (as written): <span className="mono">{recipe.total[0]} {recipe.total[1]}</span>
-          </p>
-        )}
-      </section>
+          <section className={styles.section}>
+            <h2 className={styles.sectionTitle}>Ingredients</h2>
+            <IngredientList ingredients={scaled} />
+            {recipe.total && (
+              <p className={styles.totalLine}>
+                Formula total (as written): <span className="mono">{recipe.total[0]} {recipe.total[1]}</span>
+              </p>
+            )}
+          </section>
+        </>
+      )}
 
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Method</h2>
@@ -129,7 +134,7 @@ export default function RecipePage() {
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>Notes &amp; technique</h2>
           <ul className={styles.notes}>
-            {recipe.notes.map((n, i) => <li key={i}>{n}</li>)}
+            {recipe.notes.map((n, i) => <li key={i}><RichText text={n} /></li>)}
           </ul>
         </section>
       )}

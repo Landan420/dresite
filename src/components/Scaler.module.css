@@ -37,6 +37,7 @@
 
 .weightRow {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
   align-items: center;
 }
@@ -54,6 +55,23 @@
   cursor: pointer;
   padding: 0;
   white-space: nowrap;
+}
+
+.homeBtn {
+  border: 1px solid color-mix(in srgb, var(--enamel) 40%, transparent);
+  background: var(--paper-raised);
+  color: var(--enamel);
+  font-size: 0.78rem;
+  font-weight: 600;
+  border-radius: 999px;
+  cursor: pointer;
+  padding: 0.3rem 0.7rem;
+  white-space: nowrap;
+}
+
+.homeBtn:hover {
+  background: var(--enamel);
+  color: var(--paper-raised);
 }
 
 .slider {

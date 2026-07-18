@@ -13,7 +13,8 @@ export default function Home() {
   if (!recipes) return <p className={styles.status}>Loading the formula book…</p>
 
   const cats = categoryCounts(recipes)
-  const totalIngredients = recipes.reduce((sum, r) => sum + r.ingredients.length, 0)
+  const actualRecipes = recipes.filter(r => r.category !== 'Mixing Methods')
+  const totalIngredients = actualRecipes.reduce((sum, r) => sum + r.ingredients.length, 0)
 
   return (
     <div>
@@ -24,13 +25,13 @@ export default function Home() {
           text="Every formula from Dre's pastry course, ready for a home kitchen."
         />
         <p className={styles.heroSub}>
-          <span className="gold-shine">{recipes.length} professional-scale recipes</span> — scaled by weight,
+          <span className="gold-shine">{actualRecipes.length} professional-scale recipes</span> — scaled by weight,
           organized by category, and searchable down to the ingredient.
         </p>
 
         <div className={styles.stats}>
           <div className={styles.stat}>
-            <CountUp to={recipes.length} className={styles.statNum} />
+            <CountUp to={actualRecipes.length} className={styles.statNum} />
             <span className={styles.statLabel}>recipes</span>
           </div>
           <div className={styles.stat}>

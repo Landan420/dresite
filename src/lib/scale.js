@@ -72,6 +72,18 @@ export function scaleIngredients(recipe, colIndex, targetGrams) {
   })
 }
 
+export const PRO_SCALE_THRESHOLD_G = 2500
+
+// Halves the batch repeatedly until it's under the home-kitchen threshold, so the
+// result is always a clean fraction of the original (half, quarter, eighth...)
+// rather than an arbitrary target weight.
+export function homeScaleGrams(baseGrams, threshold = PRO_SCALE_THRESHOLD_G) {
+  if (!baseGrams) return null
+  let grams = baseGrams
+  while (grams > threshold) grams /= 2
+  return grams
+}
+
 export function formatAmount(amount) {
   if (amount == null || amount === '') return ''
   if (typeof amount === 'number') {

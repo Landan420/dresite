@@ -5,11 +5,11 @@ pages_build_output_dir = "./dist"
 [[d1_databases]]
 binding = "DB"
 database_name = "dresite-recipes"
-database_id = "e1ee5b84-c69f-4442-a5fe-2c03a5ae1971"
+database_id = "b0983d83-0a83-4135-93a2-df54d333be9a"
 
 [env.production]
 
 [[env.production.d1_databases]]
 binding = "DB"
 database_name = "dresite-recipes"
-database_id = "e1ee5b84-c69f-4442-a5fe-2c03a5ae1971"
+database_id = "b0983d83-0a83-4135-93a2-df54d333be9a"

@@ -1,6 +1,6 @@
 import styles from './Scaler.module.css'
 
-export default function Scaler({ recipe, colIndex, onColIndexChange, targetGrams, onTargetGramsChange, baseGrams }) {
+export default function Scaler({ recipe, colIndex, onColIndexChange, targetGrams, onTargetGramsChange, baseGrams, homeGrams }) {
   const hasBatches = recipe.batch_cols && recipe.batch_cols.length > 1
 
   return (
@@ -42,6 +42,15 @@ export default function Scaler({ recipe, colIndex, onColIndexChange, targetGrams
               onClick={() => onTargetGramsChange(baseGrams)}
             >
               reset to {Math.round(baseGrams).toLocaleString()} g
+            </button>
+          )}
+          {homeGrams && (
+            <button
+              type="button"
+              className={styles.homeBtn}
+              onClick={() => onTargetGramsChange(homeGrams)}
+            >
+              scale to home size (~{Math.round(homeGrams).toLocaleString()} g)
             </button>
           )}
         </div>

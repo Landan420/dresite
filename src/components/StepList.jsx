@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import RichText from './RichText.jsx'
 import styles from './StepList.module.css'
 
 export default function StepList({ recipeId, steps }) {
@@ -43,7 +44,7 @@ export default function StepList({ recipeId, steps }) {
                 className={styles.checkbox}
               />
               <span className={styles.stepNum}>{i + 1}</span>
-              <span className={styles.stepText}>{step}</span>
+              <span className={styles.stepText}><RichText text={step} /></span>
             </label>
           </li>
         ))}
