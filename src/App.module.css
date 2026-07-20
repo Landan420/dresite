@@ -80,6 +80,10 @@
   font-weight: 500;
   color: var(--ink-soft);
   white-space: nowrap;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
 }
 
 .navLink:hover { color: var(--enamel); }

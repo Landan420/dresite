@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useRecipes } from '../lib/useRecipes.jsx'
 import { categoryCounts, iconFor, slugify } from '../lib/categories.js'
+import { useDocumentTitle } from '../lib/useDocumentTitle.js'
 import SplitReveal from '../components/SplitReveal.jsx'
 import CountUp from '../components/CountUp.jsx'
 import GlareCard from '../components/GlareCard.jsx'
@@ -8,6 +9,7 @@ import styles from './Home.module.css'
 
 export default function Home() {
   const { recipes, error } = useRecipes()
+  useDocumentTitle(null)
 
   if (error) return <p className={styles.status}>Couldn&rsquo;t load recipes — {error}</p>
   if (!recipes) return <p className={styles.status}>Loading the formula book…</p>

@@ -4,10 +4,12 @@ import { useRecipes } from '../lib/useRecipes.jsx'
 import { useFavorites } from '../lib/useFavorites.js'
 import { baseYieldGrams, scaleIngredients, homeScaleGrams, PRO_SCALE_THRESHOLD_G } from '../lib/scale.js'
 import { iconFor, slugify } from '../lib/categories.js'
+import { useDocumentTitle } from '../lib/useDocumentTitle.js'
 import Scaler from '../components/Scaler.jsx'
 import IngredientList from '../components/IngredientList.jsx'
 import StepList from '../components/StepList.jsx'
 import RichText from '../components/RichText.jsx'
+import RecipeSchema from '../components/RecipeSchema.jsx'
 import styles from './RecipePage.module.css'
 import listStyles from './ListPage.module.css'
 
@@ -20,6 +22,8 @@ export default function RecipePage() {
     () => recipes?.find(r => String(r.id) === id) || null,
     [recipes, id]
   )
+
+  useDocumentTitle(recipe?.title || null)
 
   const siblings = useMemo(
     () => (recipe && recipes ? recipes.filter(r => r.title === recipe.title && r.id !== recipe.id) : []),
@@ -53,6 +57,7 @@ export default function RecipePage() {
 
   return (
     <div className={styles.wrap}>
+      <RecipeSchema recipe={recipe} />
       <Link to={`/category/${slugify(recipe.category)}`} className={`${styles.back} no-print`}>
         ← {recipe.category}
       </Link>

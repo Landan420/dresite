@@ -27,6 +27,13 @@ function Header() {
   const [q, setQ] = useState('')
   const navigate = useNavigate()
   const location = useLocation()
+  const { recipes } = useRecipes()
+
+  function goToRandom() {
+    if (!recipes || !recipes.length) return
+    const pick = recipes[Math.floor(Math.random() * recipes.length)]
+    navigate(`/recipe/${pick.id}`)
+  }
 
   useEffect(() => {
     const params = new URLSearchParams(location.search)
@@ -63,6 +70,7 @@ function Header() {
         </form>
 
         <nav className={styles.nav}>
+          <button type="button" className={styles.navLink} onClick={goToRandom}>Surprise me</button>
           <Link to="/favorites" className={styles.navLink}>Favorites</Link>
           <button
             className={styles.themeBtn}
@@ -80,7 +88,7 @@ function Header() {
 
 function Footer() {
   const { recipes } = useRecipes()
-  const count = recipes?.length
+  const count = recipes?.filter(r => r.category !== 'Mixing Methods').length
 
   return (
     <footer className={`${styles.footer} no-print`}>

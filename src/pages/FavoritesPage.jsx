@@ -1,11 +1,13 @@
 import { useRecipes } from '../lib/useRecipes.jsx'
 import { useFavorites } from '../lib/useFavorites.js'
+import { useDocumentTitle } from '../lib/useDocumentTitle.js'
 import RecipeGrid from '../components/RecipeGrid.jsx'
 import styles from './ListPage.module.css'
 
 export default function FavoritesPage() {
   const { recipes, error } = useRecipes()
   const { favorites } = useFavorites()
+  useDocumentTitle('Favorites')
 
   if (error) return <p className={styles.status}>Couldn&rsquo;t load recipes — {error}</p>
   if (!recipes) return <p className={styles.status}>Loading…</p>

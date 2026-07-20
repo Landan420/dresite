@@ -1,6 +1,6 @@
 [
  {
-  "title": "1. Place water into bowl of Rye Wheat Sourdough",
+  "title": "Rye Wheat Sourdough",
   "module": "Module 2",
   "course": "Course 3",
   "course_name": "Breads & Yeast Doughs",
@@ -35,7 +35,7 @@
     "component": null
    },
    {
-    "name": "dark rye flour (pumpernickel",
+    "name": "dark rye flour (pumpernickel)",
     "amounts": [
      [
       "115",
@@ -3318,7 +3318,7 @@
   "source_page": 109
  },
  {
-  "title": "Shaping Doughnuts: No Filling with Filling Frying the Doughnuts: Toppings: Sugar Glaze",
+  "title": "Doughnut Sugar Glaze",
   "module": "Module 2",
   "course": "Course 3",
   "course_name": "Breads & Yeast Doughs",
@@ -5321,7 +5321,7 @@
   "source_page": 58
  },
  {
-  "title": "Buche De Noel Roulade Biscuit Swiss Meringue Buttercream Marzipan Roulade Biscuit",
+  "title": "Roulade Biscuit (Bûche de Noël)",
   "module": "Module 3",
   "course": "Course 6",
   "course_name": "Cakes, Fillings & Icings Pt 2",
@@ -5741,7 +5741,7 @@
   "source_page": 74
  },
  {
-  "title": "Mint Fondant - Dark Chocolate Bonbon Mint Fondant",
+  "title": "Mint Fondant (for Dark Chocolate Bonbon)",
   "module": "Module 4",
   "course": "Course 7",
   "course_name": "Chocolate & Confections",
@@ -5955,7 +5955,7 @@
   "source_page": 40
  },
  {
-  "title": "Smoked Almond Financier, Goat Cheese Fondant, Red Wine Caramel, Caramelized Cherry Smoked Almond Financier",
+  "title": "Smoked Almond Financier",
   "module": "Module 3",
   "course": "Course 6",
   "course_name": "Cakes, Fillings & Icings Pt 2",
@@ -7016,7 +7016,7 @@
   "source_page": 180
  },
  {
-  "title": "Biscuit Cuillere Espresso Syrup Zabaione Filling Biscuit Cuillere",
+  "title": "Biscuit Cuillère (Espresso Zabaione Cake)",
   "module": "Module 3",
   "course": "Course 6",
   "course_name": "Cakes, Fillings & Icings Pt 2",
@@ -12125,7 +12125,7 @@
   "source_page": 110
  },
  {
-  "title": "Biscuit Jaconde Coffee Syrup Coffee Buttercream Chocolate Ganache Biscuit Jaconde",
+  "title": "Biscuit Jaconde (Coffee Ganache Cake)",
   "module": "Module 3",
   "course": "Course 6",
   "course_name": "Cakes, Fillings & Icings Pt 2",
@@ -12933,7 +12933,7 @@
   "source_page": 118
  },
  {
-  "title": "German Chocolate Filling Fffff Fill Fil Cake (Genoise)",
+  "title": "German Chocolate Filling (Pecan-Coconut)",
   "module": "Module 3",
   "course": "Course 5",
   "course_name": "Cakes, Fillings & Icings Pt 1",
@@ -14615,7 +14615,7 @@
   "source_page": 83
  },
  {
-  "title": "Salted Caramel - Milk Chocolate Bonbon Salted Caramel Cream",
+  "title": "Salted Caramel Cream (for Milk Chocolate Bonbon)",
   "module": "Module 4",
   "course": "Course 7",
   "course_name": "Chocolate & Confections",
@@ -16019,8 +16019,8 @@
   "course_name": "Baking Techniques & Ingredients",
   "lesson": 9,
   "category": "Confections & Sugar Work",
-  "yield": null,
-  "yield_num": null,
+  "yield": "Yield approximately 36 pieces, 940 grams",
+  "yield_num": "940 grams",
   "batch_cols": [],
   "ingredients": [
    {
@@ -16050,21 +16050,6 @@
     "amounts": [
      [
       "400",
-      "grams"
-     ]
-    ],
-    "bakers_pct": null,
-    "component": null
-   },
-   {
-    "name": "(approximately",
-    "amounts": [
-     [
-      "36",
-      "pieces"
-     ],
-     [
-      "940",
       "grams"
      ]
     ],
@@ -20485,7 +20470,7 @@
   "source_page": 102
  },
  {
-  "title": "Basque Cake Basque Cake Batter Pastry Cream Basque Cake Batter",
+  "title": "Basque Cake Batter",
   "module": "Module 3",
   "course": "Course 6",
   "course_name": "Cakes, Fillings & Icings Pt 2",
@@ -20904,7 +20889,7 @@
   "source_page": 208
  },
  {
-  "title": "Chocolate & Summer Berry Coulis Dome Lime Dacquoise Cake Summer Berry Coulis Insert Chocolate Mousse Vanilla Mousseline Lime Dacquoise Cake",
+  "title": "Lime Dacquoise Cake",
   "module": "Module 3",
   "course": "Course 6",
   "course_name": "Cakes, Fillings & Icings Pt 2",
@@ -21776,7 +21761,7 @@
   "source_page": 79
  },
  {
-  "title": "Crunchy Choux, Chartreuse Mousseline, Strawberry Pate a Choux",
+  "title": "Pâte à Choux",
   "module": "Module 3",
   "course": "Course 6",
   "course_name": "Cakes, Fillings & Icings Pt 2",
@@ -22992,7 +22977,7 @@
   "source_page": 64
  },
  {
-  "title": "Lemon Raspberry Roulade Biscuit Layer Lemon Curd Buttercream Biscuit Layer",
+  "title": "Roulade Biscuit Layer (Lemon Raspberry)",
   "module": "Module 3",
   "course": "Course 6",
   "course_name": "Cakes, Fillings & Icings Pt 2",
@@ -23107,7 +23092,7 @@
   "source_page": 63
  },
  {
-  "title": "Lemon Strawberry Pistachio Cake Pistachio Pain De Gene Lemon Ricotta Sponge Strawberry Gelee Lemon Cream Lemon Mousse Pistachio Pain De Gene",
+  "title": "Pistachio Pain de Gênes",
   "module": "Module 3",
   "course": "Course 6",
   "course_name": "Cakes, Fillings & Icings Pt 2",
@@ -24899,12 +24884,12 @@
   "source_page": 188
  },
  {
-  "title": "STRAWBERY FRAISIER (two GENOISE PASTRY CREAM MOUSSELINE SIMPLE SYRUP PLAIN SPONGE CAKE (GENOISE)",
+  "title": "Plain Sponge Cake (Genoise)",
   "module": "Module 3",
   "course": "Course 6",
   "course_name": "Cakes, Fillings & Icings Pt 2",
   "lesson": 67,
-  "category": "Custards & Creams",
+  "category": "Cakes & Sponges",
   "yield": "(four 6” round cakes)Yield 635 grams",
   "yield_num": "635 grams",
   "batch_cols": [
@@ -25012,7 +24997,7 @@
   "source_page": 344
  },
  {
-  "title": "Tres Leches Cake Tres Leches Cake Layer Tres Leches Syrup Whipped Cream Tres Leches Cake Layer",
+  "title": "Tres Leches Cake Layer",
   "module": "Module 3",
   "course": "Course 6",
   "course_name": "Cakes, Fillings & Icings Pt 2",
@@ -31172,7 +31157,7 @@
   "source_page": 317
  },
  {
-  "title": "Basque Tart, Olive Oil Ice Cream, Almond, Apricot Basque Tart Dough",
+  "title": "Basque Tart Dough",
   "module": "Module 3",
   "course": "Course 6",
   "course_name": "Cakes, Fillings & Icings Pt 2",
@@ -31801,7 +31786,7 @@
   "source_page": 280
  },
  {
-  "title": "Caramel Crepe Cake, Roasted Pineapple, Banana-Citrus Sorbet Crepe",
+  "title": "Caramel Crepe Cake Batter",
   "module": "Module 3",
   "course": "Course 6",
   "course_name": "Cakes, Fillings & Icings Pt 2",
@@ -33390,7 +33375,7 @@
   "source_page": 331
  },
  {
-  "title": "Frozen Ginger Parfait, Passion Fruit Sorbet, Meringue Frozen Ginger Parfait",
+  "title": "Frozen Ginger Parfait",
   "module": "Module 3",
   "course": "Course 6",
   "course_name": "Cakes, Fillings & Icings Pt 2",
@@ -35388,7 +35373,7 @@
   "source_page": 275
  },
  {
-  "title": "RECIPES and EXECRCISES WHITE BASE (6% MILK FAT)",
+  "title": "White Base Ice Cream (6% Milk Fat)",
   "module": "Module 1",
   "course": "Course 1-2",
   "course_name": "Baking Techniques & Ingredients",
@@ -36503,7 +36488,7 @@
   "source_page": 134
  },
  {
-  "title": "Bourbon Mille Feuille, Lemon, Vanilla Ice Cream Vanilla Pastry Cream",
+  "title": "Vanilla Pastry Cream",
   "module": "Module 3",
   "course": "Course 6",
   "course_name": "Cakes, Fillings & Icings Pt 2",
@@ -37270,7 +37255,7 @@
   "source_page": 135
  },
  {
-  "title": "Machine Puff Pastry 20-Quart Machine Dough (Detrempe)",
+  "title": "Puff Pastry Dough (Détrempe, 20-Quart Batch)",
   "module": "Module 2",
   "course": "Course 4",
   "course_name": "Pies, Tarts & Laminated Doughs",
@@ -39326,7 +39311,7 @@
   "source_page": 52
  },
  {
-  "title": "Cofee & Pecan Petit Gateaux Pecan Dacquoise Pecan Caramel Coffee Crème Coffee Mousse Pecan Dacquoise",
+  "title": "Pecan Dacquoise",
   "module": "Module 3",
   "course": "Course 6",
   "course_name": "Cakes, Fillings & Icings Pt 2",
@@ -39417,7 +39402,7 @@
   "source_page": 102
  },
  {
-  "title": "Flavoring for Flour-Based Souffle Mocha Flavoring",
+  "title": "Mocha Flavoring (for Flour-Based Soufflé)",
   "module": "Module 1",
   "course": "Course 1-2",
   "course_name": "Baking Techniques & Ingredients",
@@ -41212,7 +41197,7 @@
     "component": null
    },
    {
-    "name": "nappage at end)",
+    "name": "neutral nappage (brushed on at end)",
     "amounts": [
      [
       "1",
@@ -41764,7 +41749,7 @@
   "source_page": 196
  },
  {
-  "title": "Charlotte Royale Biscuit Layers Raspberry Mousse Biscuit Layers",
+  "title": "Biscuit Layers (Charlotte Royale)",
   "module": "Module 3",
   "course": "Course 6",
   "course_name": "Cakes, Fillings & Icings Pt 2",
@@ -47505,7 +47490,7 @@
   "source_page": 139
  },
  {
-  "title": "Banana, Chocolate and Walnut Dome Walnut Biscuit Praline Krispy Chocolate Cream Insert Banana Mousse Caramel Bananas Walnut Biscuit",
+  "title": "Walnut Biscuit",
   "module": "Module 3",
   "course": "Course 6",
   "course_name": "Cakes, Fillings & Icings Pt 2",
@@ -48590,7 +48575,7 @@
   "source_page": 219
  },
  {
-  "title": "Milk Chocolate Coconut Chocolate Genoise Mousseline Coconut Caramel Pressed Coconut Caremelized Cashews Milk Chocolate Mousse Chocolate Genoise Mousseline",
+  "title": "Chocolate Genoise Mousseline (Coconut Milk Chocolate)",
   "module": "Module 3",
   "course": "Course 6",
   "course_name": "Cakes, Fillings & Icings Pt 2",
@@ -48812,7 +48797,7 @@
   "source_page": 211
  },
  {
-  "title": "Pecan Maple Petit Gauteux (Gluten Free, Dairy Free) Pecan Biscuit Pecan Dacquoise Layer Maple Panna Cotta Chocolate Glacage Pecan Biscuit",
+  "title": "Pecan Biscuit (Maple Pecan Petit Gâteau)",
   "module": "Module 3",
   "course": "Course 6",
   "course_name": "Cakes, Fillings & Icings Pt 2",
@@ -50383,7 +50368,7 @@
   "source_page": 31
  },
  {
-  "title": "Cranberry Orange Crumb Muffins Mmmmmmmuffmuffins Muffins",
+  "title": "Cranberry Orange Crumb Muffins",
   "module": "Module 3",
   "course": "Course 5",
   "course_name": "Cakes, Fillings & Icings Pt 1",

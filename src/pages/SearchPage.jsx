@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { useRecipes } from '../lib/useRecipes.jsx'
 import { categoryCounts } from '../lib/categories.js'
+import { useDocumentTitle } from '../lib/useDocumentTitle.js'
 import RecipeGrid from '../components/RecipeGrid.jsx'
 import styles from './ListPage.module.css'
 
@@ -18,6 +19,7 @@ export default function SearchPage() {
   const { recipes, error } = useRecipes()
   const q = params.get('q') || ''
   const category = params.get('category') || ''
+  useDocumentTitle(q ? `“${q}”` : 'Search')
 
   const results = useMemo(() => {
     if (!recipes) return []
